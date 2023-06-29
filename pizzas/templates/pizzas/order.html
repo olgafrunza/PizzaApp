@@ -1,0 +1,23 @@
+{% extends 'pizzas/base.html' %}
+
+
+{% block body %}
+
+    <h1>Order Page</h1>
+    
+    <ul>
+        <li>{{ pizza.name }}</li>
+        <li>{{ pizza.image.url }} </li>
+        <li>{{ pizza.topping.all | join:", " }} </li>
+        <li>{{ pizza.size }}</li>
+        <br>
+        <hr>
+    </ul>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Order">
+    </form>
+
+{% endblock body %}

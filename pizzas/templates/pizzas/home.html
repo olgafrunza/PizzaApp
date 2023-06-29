@@ -1,0 +1,19 @@
+{% extends 'pizzas/base.html' %}
+{% load static %}
+
+{% block body %}
+
+    <style>
+        body {
+            background-image: url("{% static 'pizzas/nadiasgarden.jpg' %}");
+            background-size: cover;
+            height: 100vh;
+        }
+    </style>
+
+    {% comment %}    
+    <h1>Home Page</h1>
+    <p>Welcome {{ request.user | title }}</p>
+    {% endcomment %}
+
+{% endblock body %}

@@ -1,0 +1,19 @@
+{% extends 'pizzas/base.html' %}
+
+
+{% block body %}
+
+    <h1>Pizzas Page</h1>
+    
+    <ul>
+    {% for pizza in pizzas %}
+        <li>{{ pizza.name }}</li>
+        <li>{{ pizza.image.url }} </li>
+        <li>{{ pizza.topping.all | join:", " }} </li>
+        <li>{{ pizza.size }}</li>
+        <br>
+        <hr>
+    {% endfor %}
+    </ul>
+
+{% endblock body %}
